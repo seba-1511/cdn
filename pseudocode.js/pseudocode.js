@@ -880,9 +880,8 @@ TextEnvironment.prototype.renderToHTML = function() {
             break;
         case 'cond-symbol':
             this._html.beginSpan('ps-keyword')
+                      .putText(text.toLowerCase())
                       .endSpan();
-                      //.putText(text.toLowerCase())
-                      //.endSpan();
             break;
         case 'special':
             if (text === '\\\\') {
