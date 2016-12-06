@@ -699,7 +699,7 @@ Parser.prototype._parseAtom = function() {
         if (tokenText === null) continue;
 
         var anyWhitespace = this._lexer.get().whitespace;
-        if (atomType !== 'ordinary') tokenText = tokenText.toLowerCase();
+        if (atomType !== 'ordinary') tokenText = tokenText;
         return new AtomNode(atomType, tokenText, anyWhitespace);
     }
     return null;
